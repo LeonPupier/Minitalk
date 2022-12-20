@@ -6,12 +6,19 @@
 /*   By: lpupier <lpupier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 12:19:49 by lpupier           #+#    #+#             */
-/*   Updated: 2022/12/15 12:58:04 by lpupier          ###   ########.fr       */
+/*   Updated: 2022/12/20 17:03:55 by lpupier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Headers
 #include "../headers/minitalk.h"
 
+/**
+ * @brief Atoi overflow check function for the sign.
+ * 
+ * @param sign Sign of atoi conversion detectedß
+ * @return int Returns 1 or -1 depending on the sign of the overflow function.
+ */
 static int	ft_check_overflow(int sign)
 {
 	if (sign == -1)
@@ -19,6 +26,12 @@ static int	ft_check_overflow(int sign)
 	return (-1);
 }
 
+/**
+ * @brief Conversion function if the final integer exceeds the overflow.
+ * 
+ * @param res Integer just converted to return.
+ * @return long long int Returns the integer subject to the overflow test.
+ */
 static long long int	ft_conv(long long int res)
 {
 	if (res > INT_MAX)
@@ -29,6 +42,12 @@ static long long int	ft_conv(long long int res)
 		return (res);
 }
 
+/**
+ * @brief Function allowing to cover a character string in an integer.
+ * 
+ * @param str String to convert to integer
+ * @return int Integer resulting from the conversion from the character string.
+ */
 int	ft_atoi(const char *str)
 {
 	long long int	result;

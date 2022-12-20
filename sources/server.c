@@ -6,15 +6,19 @@
 /*   By: lpupier <lpupier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:39:41 by lpupier           #+#    #+#             */
-/*   Updated: 2022/12/20 13:04:50 by lpupier          ###   ########.fr       */
+/*   Updated: 2022/12/20 17:06:06 by lpupier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Headers
 #include "../headers/minitalk.h"
 
 // Global variable: String list for character storage
 t_list	*g_str;
 
+/**
+ * @brief Display function of the chain list in the server terminal.
+ */
 static void	display(void)
 {
 	t_list	*temp;
@@ -29,6 +33,11 @@ static void	display(void)
 	}
 }
 
+/**
+ * @brief Adding the new character at the start of the chain list.
+ * 
+ * @param c New character from bit shifted signals.
+ */
 static void	add_char(char c)
 {
 	t_list	*new;
@@ -37,6 +46,12 @@ static void	add_char(char c)
 	ft_lstadd_front(&g_str, new);
 }
 
+/**
+ * @brief Processing of the signal sent by the client and recomposition
+ * of the character of the string.
+ *
+ * @param code Signal code sent: SIGUSR1 or SIGUSR2.
+ */
 static void	ft_sigusr1(int code)
 {
 	static int		bit;
@@ -45,7 +60,7 @@ static void	ft_sigusr1(int code)
 	if (code == SIGUSR1)
 		c = c | (1 << bit);
 	bit++;
-	if (bit == 8)
+	if (bit == BYTE_SIZE)
 	{
 		if (c == '\0')
 		{
@@ -60,6 +75,12 @@ static void	ft_sigusr1(int code)
 	}
 }
 
+/**
+ * @brief Program body, initialize the server and listen to signals.
+ * 
+ * @return The end status of the server with the
+ * EXIT_SUCCESS or EXIT_FAILURE macros
+ */
 int	main(void)
 {
 	ft_printf("\033[07m[SERVER LOGS]\033[00m\n");
