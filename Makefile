@@ -6,14 +6,14 @@
 #    By: lpupier <lpupier@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/02 08:32:06 by lpupier           #+#    #+#              #
-#    Updated: 2022/12/19 14:28:09 by lpupier          ###   ########.fr        #
+#    Updated: 2022/12/20 11:39:05 by lpupier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Constants
 NAME_SERVER		=	server
 NAME_CLIENT		=	client
-CFLAGS			=	-Wall -Wextra -Werror #-fsanitize=address -g3
+CFLAGS			=	-Wall -Wextra -Werror -g3
 
 # Directories path
 DIR_SRCS		=	sources/
@@ -24,7 +24,8 @@ DIR_PRINTF		=	ft_printf/
 HEADERS			=	$(DIR_HEADERS)minitalk.h
 
 SRCS_SERVER		=	$(DIR_SRCS)server.c \
-					$(DIR_SRCS)ft_atoi.c
+					$(DIR_SRCS)ft_atoi.c \
+					$(DIR_SRCS)lst.c
 
 SRCS_CLIENT		=	$(DIR_SRCS)client.c \
 					$(DIR_SRCS)ft_atoi.c

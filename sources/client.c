@@ -6,7 +6,7 @@
 /*   By: lpupier <lpupier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:43:53 by lpupier           #+#    #+#             */
-/*   Updated: 2022/12/19 14:23:56 by lpupier          ###   ########.fr       */
+/*   Updated: 2022/12/20 12:42:41 by lpupier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,16 @@ static void	send_bit(pid_t pid, char c)
 	while (bit < 8)
 	{
 		if ((c & (1 << bit)) != 0)
-			kill(pid, SIGUSR1);
+		{
+			if (kill(pid, SIGUSR1) < 0)
+				exit(1);
+		}
 		else
-			kill(pid, SIGUSR2);
-		usleep(200);
+		{
+			if (kill(pid, SIGUSR2) < 0)
+				exit(1);
+		}
+		usleep(45);
 		bit++;
 	}
 }
