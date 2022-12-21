@@ -6,7 +6,7 @@
 /*   By: lpupier <lpupier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:39:41 by lpupier           #+#    #+#             */
-/*   Updated: 2022/12/20 17:06:06 by lpupier          ###   ########.fr       */
+/*   Updated: 2022/12/21 10:29:35 by lpupier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ static void	ft_sigusr1(int code)
  * @brief Program body, initialize the server and listen to signals.
  * 
  * @return The end status of the server with the
- * EXIT_SUCCESS or EXIT_FAILURE macros
+ * EXIT_SUCCESS or EXIT_FAILURE macros.
  */
 int	main(void)
 {

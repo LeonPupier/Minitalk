@@ -6,7 +6,7 @@
 /*   By: lpupier <lpupier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:43:53 by lpupier           #+#    #+#             */
-/*   Updated: 2022/12/20 17:07:34 by lpupier          ###   ########.fr       */
+/*   Updated: 2022/12/21 10:45:54 by lpupier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static void	send_bit(pid_t pid, char c)
  * @param argc Number of arguments provided at the launch of the program.
  * @param argv List of argument strings supplied to the program.
  * @return int The end status of the server with the
- * EXIT_SUCCESS or EXIT_FAILURE macros
+ * EXIT_SUCCESS or EXIT_FAILURE macros.
  */
 int	main(int argc, char **argv)
 {

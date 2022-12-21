@@ -6,7 +6,7 @@
 /*   By: lpupier <lpupier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 12:19:49 by lpupier           #+#    #+#             */
-/*   Updated: 2022/12/20 17:03:55 by lpupier          ###   ########.fr       */
+/*   Updated: 2022/12/21 10:29:57 by lpupier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /**
  * @brief Atoi overflow check function for the sign.
  * 
- * @param sign Sign of atoi conversion detectedß
+ * @param sign Sign of atoi conversion detected.
  * @return int Returns 1 or -1 depending on the sign of the overflow function.
  */
 static int	ft_check_overflow(int sign)
@@ -45,7 +45,7 @@ static long long int	ft_conv(long long int res)
 /**
  * @brief Function allowing to cover a character string in an integer.
  * 
- * @param str String to convert to integer
+ * @param str String to convert to integer.
  * @return int Integer resulting from the conversion from the character string.
  */
 int	ft_atoi(const char *str)
