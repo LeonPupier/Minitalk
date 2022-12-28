@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lpupier <lpupier@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lpupier <lpupier@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 14:01:18 by lpupier           #+#    #+#             */
-/*   Updated: 2022/12/21 10:31:40 by lpupier          ###   ########.fr       */
+/*   Updated: 2022/12/28 13:09:15 by lpupier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 
 // Macros
 # define BYTE_SIZE 8
-# define SLEEP_TIME 45
+# define SLEEP_TIME 60
 
 // String sructure
 typedef struct s_list
