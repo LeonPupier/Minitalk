@@ -4,7 +4,7 @@ This project was completed as part of the curriculum at École 42. The goal of t
 
 ## Installation
 
-To install and run the program, follow these steps:
+To install and run the program, follow these steps: 
 
 1. Clone the repository to your local machine.
 2. Open a terminal window and navigate to the root directory of the project.
